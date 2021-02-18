@@ -8,3 +8,6 @@ version = "0.0.0"
 [dependencies]
 afl = "0.8"
 juniper = {path = "../juniper"}
+
+[dev-dependencies]
+include_dir = "0.6"
