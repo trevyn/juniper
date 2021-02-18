@@ -1,0 +1,10 @@
+[package]
+authors = ["Eden <rust@eden2.com>"]
+edition = "2018"
+name = "juniper_fuzz"
+publish = false
+version = "0.0.0"
+
+[dependencies]
+afl = "0.8"
+juniper = {path = "../juniper"}

@@ -11,6 +11,7 @@ members = [
   "integration_tests/juniper_tests",
   "integration_tests/async_await",
   "integration_tests/codegen_fail",
+  "juniper_fuzz",
   "juniper_hyper",
   "juniper_iron",
   "juniper_rocket",
