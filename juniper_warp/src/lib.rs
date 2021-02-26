@@ -130,7 +130,7 @@ where
                 GraphQLBatchRequest::Single(ref r) => {
                     log::info!("graphql request {:#?}", r.query)
                 }
-                GraphQLBatchRequest::Batch(b) => b.into_iter().for_each(|r| {
+                GraphQLBatchRequest::Batch(ref b) => b.iter().for_each(|r| {
                     log::info!("batch graphql request {:#?}", r.query);
                 }),
             };
