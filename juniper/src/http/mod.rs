@@ -29,7 +29,7 @@ pub struct GraphQLRequest<S = DefaultScalarValue>
 where
     S: ScalarValue,
 {
-    query: String,
+    pub query: String,
     #[serde(rename = "operationName")]
     operation_name: Option<String>,
     #[serde(bound(deserialize = "InputValue<S>: Deserialize<'de> + Serialize"))]

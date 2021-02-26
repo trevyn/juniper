@@ -126,6 +126,15 @@ where
     let handle_post_json_request = move |context: CtxT, req: GraphQLBatchRequest<S>| {
         let schema = post_json_schema.clone();
         async move {
+            match req {
+                GraphQLBatchRequest::Single(ref r) => {
+                    log::info!("graphql request {:#?}", r.query)
+                }
+                GraphQLBatchRequest::Batch(b) => b.into_iter.for_each(|r| {
+                    log::info!("batch graphql request {:#?}", r.query);
+                }),
+            };
+
             let resp = req.execute(&schema, &context).await;
 
             Ok::<_, warp::Rejection>(build_response(

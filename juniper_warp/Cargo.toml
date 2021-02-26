@@ -12,6 +12,7 @@ repository = "https://github.com/graphql-rust/juniper"
 subscriptions = ["juniper_graphql_ws"]
 
 [dependencies]
+log = "0.4"
 anyhow = "1.0"
 bytes = "0.5"
 futures = "0.3.1"
